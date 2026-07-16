@@ -131,6 +131,15 @@ class DocumentProcessor:
         self,
         sources: List[Union[str, Path]],
     ) -> List[Document]:
+        """
+        Load documents from a list of sources.
+        
+        Supported sources:
+            - URL (string starting with http:// or https://)
+            - PDF file
+            - Folder of PDF files
+            - Text file (.txt)
+        """
 
         documents: List[Document] = []
 
